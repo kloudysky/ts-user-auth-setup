@@ -29,6 +29,7 @@ const client = createClient({
     cacheExchange({
       updates: {
         Mutation: {
+          logout: () => {},
           login: (_result, args, cache, info) => {
             betterUpdateQuery<LoginMutation, MeQuery>(
               cache,
